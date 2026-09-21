@@ -1,0 +1,2 @@
+.contact .target-roles{display:inline-block;margin:-8px 0 30px;padding:8px 12px;border:1px solid rgba(191,250,245,.45);border-radius:999px;color:#dffdfa;font-size:.86rem;font-weight:700}
+@media(max-width:800px){.contact .target-roles{margin-top:-12px;font-size:.8rem;line-height:1.45}}
