@@ -43,6 +43,11 @@ document.addEventListener('click', (event) => {
   if (navigation.classList.contains('is-open') && !navigation.contains(event.target) && !menuButton.contains(event.target)) closeMenu();
 });
 
+const desktopNavigation = window.matchMedia('(min-width: 1071px)');
+desktopNavigation.addEventListener('change', (event) => {
+  if (event.matches) closeMenu();
+});
+
 menuButton.addEventListener('focusout', (event) => {
   if (navigation.classList.contains('is-open') && !navigation.contains(event.relatedTarget) && event.relatedTarget !== menuButton) closeMenu();
 });
@@ -50,55 +55,28 @@ navigation.addEventListener('focusout', (event) => {
   if (navigation.classList.contains('is-open') && !navigation.contains(event.relatedTarget) && event.relatedTarget !== menuButton) closeMenu();
 });
 
-const track = document.querySelector('.process-track');
-const steps = [...track.querySelectorAll('.process-step')];
-const nodes = steps.map((step) => step.querySelector('.process-node'));
-const route = track.querySelector('.process-route');
-const routePath = route.querySelector('path');
-const marker = track.querySelector('.process-marker');
-const examples = [...document.querySelectorAll('.process-example')];
-const processStatus = document.querySelector('#process-status');
-let routeFrame = 0;
+const diagnosisButtons = [...document.querySelectorAll('.diagnosis-tab')];
+const diagnosisPanels = [...document.querySelectorAll('.diagnosis-panel')];
+const diagnosisStatus = document.querySelector('#diagnosis-status');
 
-function positionRoute() {
-  routeFrame = 0;
-  const trackRect = track.getBoundingClientRect();
-  const points = nodes.map((node) => {
-    const rect = node.getBoundingClientRect();
-    return { x: rect.left - trackRect.left + rect.width / 2, y: rect.top - trackRect.top + rect.height / 2 };
+diagnosisButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    const selected = button.dataset.case;
+    diagnosisButtons.forEach((item) => {
+      const active = item === button;
+      item.classList.toggle('is-active', active);
+      item.setAttribute('aria-pressed', String(active));
+    });
+    diagnosisPanels.forEach((panel) => {
+      panel.classList.toggle('is-active', panel.dataset.casePanel === selected);
+    });
+    const panel = diagnosisPanels.find((item) => item.dataset.casePanel === selected);
+    diagnosisStatus.textContent = panel.querySelector('h3').textContent;
   });
-  route.setAttribute('viewBox', `0 0 ${trackRect.width} ${trackRect.height}`);
-  routePath.setAttribute('d', points.map((point, index) => `${index ? 'L' : 'M'} ${point.x} ${point.y}`).join(' '));
-  const selected = steps.findIndex((step) => step.querySelector('input').checked);
-  marker.style.left = `${points[selected].x}px`;
-  marker.style.top = `${points[selected].y}px`;
-  track.classList.add('is-ready');
-}
-
-function scheduleRoute() {
-  if (routeFrame) cancelAnimationFrame(routeFrame);
-  routeFrame = requestAnimationFrame(positionRoute);
-}
-
-track.addEventListener('change', () => {
-  const selected = steps.findIndex((step) => step.querySelector('input').checked);
-  examples.forEach((example, index) => example.classList.toggle('is-current', index === selected));
-  const current = examples[selected];
-  processStatus.textContent = `Beispiel: ${current.querySelector('strong').textContent}. ${current.querySelector('div p').textContent}`;
-  scheduleRoute();
 });
-window.addEventListener('resize', scheduleRoute);
-if ('ResizeObserver' in window) {
-  const routeObserver = new ResizeObserver(scheduleRoute);
-  routeObserver.observe(track);
-  nodes.forEach((node) => routeObserver.observe(node));
-}
-if (document.fonts) document.fonts.ready.then(scheduleRoute);
-scheduleRoute();
 
 const sectionLinks = [...navigation.querySelectorAll('a[href^="#"]')];
 const sections = sectionLinks.map((link) => document.querySelector(link.getAttribute('href'))).filter(Boolean);
-
 if ('IntersectionObserver' in window) {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
