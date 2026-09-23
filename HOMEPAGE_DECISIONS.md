@@ -1,0 +1,62 @@
+# Homepage: Entscheidungen und Projektstand
+
+**Zuletzt aktualisiert:** 2026-09-23
+**Zweck:** Knappe, chatübergreifende Quelle für bestätigte Homepage-Entscheidungen, ausgeschlossene Richtungen und den nächsten Arbeitsschritt. Kein Gesprächsprotokoll.
+
+## Aktueller Stand
+
+- Die Homepage ist Yeshe Sampas persönliche Bewerbungs- und Portfolioseite.
+- Der aktuelle Seitencode liegt in `design-preview/` als statische HTML-, CSS- und JavaScript-Dateien.
+- Zuletzt geprüft: Branch `main`, lokal auf `origin/main`, Ausgangs-HEAD `28d3948`.
+- Das nächste Upgrade ist **geplant, noch nicht begonnen**. Es wurden dafür weder Branch noch Worktrees oder Vorschauvarianten erstellt.
+- Die lokale Arbeitskopie hatte zuletzt zusätzlich den untracked Ordner `.codex-remote-attachments/`; dieser gehört nicht zum Upgrade und darf nicht versehentlich aufgenommen werden.
+
+## Ziel und Positionierung
+
+- Zielrollen: Inside Sales, Sales Support und technischer Verkauf, besonders bei IT- und Softwareunternehmen.
+- Die Seite soll Yeshe als Person und Bewerber hervorheben, nicht wie eine IT-Firma oder ein Developer-Portfolio wirken.
+- Zentrale Kombination: technische Verkaufserfahrung und Kundenverständnis plus ein systematischer, reflektierter Einsatz von KI.
+- CV, Erfahrung, Profil und Kontakt müssen schnell auffindbar bleiben. Desktop hat aktuell Priorität; Lesbarkeit, Bedienbarkeit und Zugänglichkeit dürfen auf Mobilgeräten dennoch nicht brechen.
+
+## Bestätigte Richtung für das nächste Upgrade
+
+Die gewählte Richtung verbindet Astras inhaltliche Prioritäten mit den visuellen und interaktiven Ideen der bisherigen Experten:
+
+1. **Verkaufsbelege greifbarer machen.** Einen konkreten, wahrheitsgetreuen Fall aus der Berufspraxis priorisieren: Ausgangslage, Yeshes Verantwortung und eigener Beitrag; ein Ergebnis nur nennen, wenn es belegt und zur Veröffentlichung freigegeben ist.
+2. **Wiederholungen kürzen.** Sidestep, KI-Methode und den Transfer in den IT-/Verkaufsalltag knapp miteinander verbinden, statt denselben Gedanken in mehreren langen Abschnitten zu wiederholen.
+3. **Die „Denkspur“ visuell integrieren.** Beobachtung → Klärung → Entscheidung kann als wiederkehrendes grafisches Motiv die tatsächlichen Beispiele verbinden. Dafür keinen zusätzlichen langen Erklärblock hinzufügen.
+4. **Gezielte Visuals und Motion ergänzen.** Eine markante, persönliche Gestaltung und wenige sinnvolle Interaktionen sind erwünscht. Bewegung soll Orientierung oder Verständnis unterstützen und eine ruhige, statische Alternative bei reduzierter Bewegung behalten.
+5. **Tom Sears nur als Referenz nutzen.** Relevant sind einzelne Struktur- und Interaktionsideen; weder Layout noch Stil sollen kopiert werden.
+
+## Sidestep und KI: korrekte Darstellung
+
+- Sidestep ist ein konkretes Beispiel für Yeshes systematische Problemanalyse und den Einsatz von KI-Agenten.
+- Seine Denkweise lässt sich als Problem → Messung → Hypothese/Gegenhypothese → Experiment → Ergebnis → nächste Entscheidung beschreiben.
+- Der aktuelle Prüfstand zeigt mögliche Erklärungen und vorgeschlagene Tests. Er darf nicht als Nachweis bereits ausgeführter Experimente oder gemessener Resultate beschrieben werden, sofern diese nicht separat bestätigt sind.
+- Die technische Implementierung in Sidestep erfolgt durch KI-/Coding-Agenten. Yeshe beansprucht keine selbständige Softwareentwicklungs- oder Programmiererfahrung.
+- KI-Orchestrierung und kritische Nutzung dürfen als praktische Stärke sichtbar sein. Keine unbelegte Rangbehauptung wie „besser als 95 % der Nutzer“ verwenden.
+
+## Ausgeschlossene oder nicht beschlossene Richtungen
+
+- Generisches Portfolio- oder SaaS-Template, typische Developer-Portfolio-Optik, austauschbare Bento-/Card-Grids, übermäßig abgerundete Karten, beliebige Neon-/Gradient-Optik oder Effekte nur um ihrer selbst willen.
+- Die Homepage als IT-Firma, Softwareprodukt oder persönliche Software-Engineering-Seite inszenieren.
+- Sidestep zum alleinigen Hauptthema machen oder den Verkaufshintergrund dahinter verschwinden lassen.
+- Unbelegte Umsatz-, Leistungs- oder Projektergebnisse erfinden; Kennzahlen und heikle Details erst nach Prüfung und Freigabe veröffentlichen.
+- Lange, redundante Erklärungen zur KI-Praxis oder ein zusätzlicher Denkspur-Abschnitt, der bestehende Inhalte nochmals erzählt.
+- Überladene Animationen, 3D/WebGL als Selbstzweck oder Interaktionen, die CV, Erfahrung, Profil oder Kontakt verstecken.
+- CV-/PDF-Inhalte ohne ausdrücklichen Auftrag ändern.
+
+## Vorschau- und Chat-Arbeitsweise
+
+- Den nächsten Entwurf auf Basis des aktuellen Git-Stands entwickeln, aber isoliert in Codex-Worktrees; `main` bleibt bis zur Auswahl der Vorschau unangetastet.
+- Die Zahl und die konkreten Richtungen paralleler Entwürfe sind noch offen. Falls drei Varianten gewünscht sind, sollen sie unabhängig voneinander vom gleichen Ausgangsstand starten und jeweils einen eigenen Arbeitsbereich bekommen.
+- Ein Worktree/Chat kennt seinen Startstand und diese Datei, aber nicht automatisch die Änderungen oder den Gesprächsverlauf anderer Chats. Der koordinierende Chat vergleicht deren Ergebnisse.
+- Für mehrere gleichzeitig öffentliche Vorschau-Links können nach der Auswahl getrennte Vorschauordner veröffentlicht werden. Das ist noch nicht beschlossen; alles auf GitHub Pages veröffentlichte ist öffentlich.
+- Vor einem neuen Chat: `AGENTS.md` und diese Datei lesen, den tatsächlichen Git-Stand prüfen und den konkreten Auftrag nennen. Diese Datei bei bestätigten Entscheidungen oder relevantem Fortschritt aktualisieren.
+
+## Offen für die nächste Planungsrunde
+
+- Wie viele Varianten sollen tatsächlich entworfen werden, und worin sollen sie sich unterscheiden?
+- Welcher konkrete Verkaufsfall zeigt Yeshes Beitrag am glaubwürdigsten? Fakten, Zeitraum, Kennzahlen und gewünschte Veröffentlichung vor Verwendung prüfen.
+- Sollen Varianten nur lokal verglichen oder später gleichzeitig öffentlich verlinkt werden?
+- Nach Umsetzung: gerenderte Desktop- und Mobilansicht sowie Tastaturbedienung und reduzierte Bewegung prüfen. Die bisherigen Scores (ungefähr 79–82 aktuell, 86–89 als Upgrade-Prognose) sind subjektive Schätzungen, keine Abnahmekriterien.
