@@ -10,7 +10,7 @@
 - `dist/` enthält die dazugehörigen Assets: Stylesheet, JavaScript, Porträt und PDFs. Die Hauptseite lädt diese Dateien über relative `dist/...`-Pfade.
 - `dist/` ist damit ein Asset-Ordner, kein Veröffentlichungs-Einstieg. Die doppelte `dist/index.html`, `dist/vorschau/`, `design-preview/`, `.openai/hosting.json` und `.superdesign/`-Projektdateien wurden aus der lokalen Arbeitskopie entfernt.
 - GitHub Pages soll den Repository-Hauptordner auf Branch `main` veröffentlichen. **Veröffentlichungsstatus UNCONFIRMED:** Die Pages-Einstellung und öffentliche Erreichbarkeit wurden noch nicht geprüft. Die vorhandene Sites-Seite bleibt extern unverändert und wird von diesem Repository nicht mehr benötigt.
-- Diese lokale Umstellung basiert auf Branch `main`, Ausgangs-HEAD `10a40d2`; sie ist noch nicht committet oder gepusht.
+- Die Umstellung wurde auf Branch `main` in Commit `e0f784e` nach `origin/main` gepusht.
 - Das inhaltliche Homepage-Upgrade ist **geplant, noch nicht umgesetzt**. Die aktuelle lokale Änderung bereinigt nur Seitenstruktur und Veröffentlichungsbasis.
 - Die lokale Arbeitskopie enthält weiterhin den untracked Ordner `.codex-remote-attachments/`; er gehört nicht zu dieser Änderung und darf nicht verändert oder aufgenommen werden.
 
