@@ -7,8 +7,9 @@
 
 - Die Homepage ist Yeshe Sampas persönliche Bewerbungs- und Portfolioseite.
 - `index.html` im Repository-Hauptordner ist die eigentliche Homepage. Sie verwendet den bestehenden Hauptseiteninhalt aus `dist/index.html` und lädt dessen Styles, Skript, Porträt und PDFs aus `dist/`.
-- `design-preview/` enthält die Quelldateien der separaten Feedback-Vorschau. Die veröffentlichte Kopie liegt in `dist/vorschau/` und ist über den statischen Host unter `/vorschau/` vorgesehen.
-- `.openai/hosting.json` weist `dist/` als statischen Veröffentlichungsordner aus. `dist/index.html` bleibt die Hauptseite; `dist/vorschau/index.html` samt CSS und JavaScript ist die öffentliche Prüfvorschau. Deren Bild- und PDF-Links zeigen auf gemeinsam genutzte Dateien in `dist/`.
+- `design-preview/` enthält die Quelldateien der separaten Feedback-Vorschau. Die für die Veröffentlichung vorbereitete Kopie liegt in `dist/vorschau/` und ist für den statischen Host unter `/vorschau/` bestimmt.
+- `.openai/hosting.json` weist `dist/` als statischen Veröffentlichungsordner aus. `dist/index.html` bleibt die Hauptseite; `dist/vorschau/index.html` samt CSS und JavaScript enthält die Prüfvorschau. Deren Bild- und PDF-Links zeigen auf gemeinsam genutzte Dateien in `dist/`.
+- **Veröffentlichungsstatus UNCONFIRMED:** Die verbundene Sites-Seite ist derzeit nur für den Eigentümer freigegeben. Ihr konfigurierter Cloudflare-Artifact-Quellbranch `main` steht auf `e954f6e`; deshalb konnte die Sites-Version für den nach `origin/main` gepushten Stand nicht gespeichert oder veröffentlicht werden. Die öffentliche Erreichbarkeit von `/vorschau/` ist noch nicht bestätigt.
 - Vor dieser Index-Änderung war Branch `main` mit `origin/main` synchron; Ausgangs-HEAD `6bbe334`.
 - Das nächste Upgrade ist **geplant, noch nicht begonnen**. Es wurden dafür weder Branch noch Worktrees oder Vorschauvarianten erstellt.
 - Die lokale Arbeitskopie hatte zuletzt zusätzlich den untracked Ordner `.codex-remote-attachments/`; dieser gehört nicht zum Upgrade und darf nicht versehentlich aufgenommen werden.
@@ -53,7 +54,7 @@ Die gewählte Richtung verbindet Astras inhaltliche Prioritäten mit den visuell
 - Den nächsten Entwurf auf Basis des aktuellen Git-Stands entwickeln, aber isoliert in Codex-Worktrees; `main` bleibt bis zur Auswahl der Vorschau unangetastet.
 - Die Zahl und die konkreten Richtungen paralleler Entwürfe sind noch offen. Falls drei Varianten gewünscht sind, sollen sie unabhängig voneinander vom gleichen Ausgangsstand starten und jeweils einen eigenen Arbeitsbereich bekommen.
 - Ein Worktree/Chat kennt seinen Startstand und diese Datei, aber nicht automatisch die Änderungen oder den Gesprächsverlauf anderer Chats. Der koordinierende Chat vergleicht deren Ergebnisse.
-- Die Feedback-Vorschau wird aus `design-preview/` nach `dist/vorschau/` veröffentlicht und unter `/vorschau/` geteilt. Änderungen an der Quelle müssen in die veröffentlichte Kopie übernommen werden. Weitere parallele Vorschauvarianten sind noch nicht beschlossen. Alles auf GitHub Pages veröffentlichte ist öffentlich.
+- Die Feedback-Vorschau wird aus `design-preview/` nach `dist/vorschau/` übernommen und soll unter `/vorschau/` geteilt werden. Änderungen an der Quelle müssen in die Ausgabekopie übernommen werden. Weitere parallele Vorschauvarianten sind noch nicht beschlossen. Alles auf GitHub Pages veröffentlichte ist öffentlich.
 - Vor einem neuen Chat: `AGENTS.md` und diese Datei lesen, den tatsächlichen Git-Stand prüfen und den konkreten Auftrag nennen. Diese Datei bei bestätigten Entscheidungen oder relevantem Fortschritt aktualisieren.
 
 ## Offen für die nächste Planungsrunde
@@ -61,4 +62,5 @@ Die gewählte Richtung verbindet Astras inhaltliche Prioritäten mit den visuell
 - Wie viele Varianten sollen tatsächlich entworfen werden, und worin sollen sie sich unterscheiden?
 - Welcher konkrete Verkaufsfall zeigt Yeshes Beitrag am glaubwürdigsten? Fakten, Zeitraum, Kennzahlen und gewünschte Veröffentlichung vor Verwendung prüfen.
 - Wie viele Vorschauvarianten sollen parallel entstehen? Die bestehende Feedback-Vorschau soll öffentlich sein.
+- Vor dem Teilen: den Quellbranch der verbundenen Sites-Seite mit dem Repo-Stand abgleichen, die Version speichern und veröffentlichen sowie die öffentliche Erreichbarkeit prüfen.
 - Nach Umsetzung: gerenderte Desktop- und Mobilansicht sowie Tastaturbedienung und reduzierte Bewegung prüfen. Die bisherigen Scores (ungefähr 79–82 aktuell, 86–89 als Upgrade-Prognose) sind subjektive Schätzungen, keine Abnahmekriterien.
