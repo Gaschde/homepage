@@ -9,9 +9,9 @@
 - `index.html` im Repository-Hauptordner ist der einzige Homepage-Einstiegspunkt und enthält den neuesten bestätigten Stand.
 - `dist/` enthält die dazugehörigen Assets: Stylesheet, JavaScript, Porträt und PDFs. Die Hauptseite lädt diese Dateien über relative `dist/...`-Pfade.
 - `dist/` ist damit ein Asset-Ordner, kein Veröffentlichungs-Einstieg. Die doppelte `dist/index.html`, `dist/vorschau/`, `design-preview/`, `.openai/hosting.json` und `.superdesign/`-Projektdateien wurden aus der lokalen Arbeitskopie entfernt.
-- GitHub Pages soll den Repository-Hauptordner auf Branch `main` veröffentlichen. **Veröffentlichungsstatus UNCONFIRMED:** Die Pages-Einstellung und öffentliche Erreichbarkeit wurden noch nicht geprüft. Die vorhandene Sites-Seite bleibt extern unverändert und wird von diesem Repository nicht mehr benötigt.
-- Die Umstellung wurde auf Branch `main` in Commit `e0f784e` nach `origin/main` gepusht.
-- Das bestätigte Homepage-Upgrade ist im isolierten Worktree `homepage-upgrade` umgesetzt: INOVIS als faktischer Verkaufsbeleg, gekürzter ICT-Transfer und ein durchgängiges Linienmotiv für die Denkspur. Frische Read-only-Reviews zu Gestaltung, Frontend und Bewerberperspektive wurden durchgeführt und ihre relevanten Befunde eingearbeitet. Desktop, 390 px und 320 px, mobile Navigation mit Tastatur und Escape, Sidestep-Auswahl und reduzierte Bewegung wurden gerendert beziehungsweise geprüft; bei 320 px trat kein Überlauf auf. Die Änderung ist weder committet noch veröffentlicht.
+- GitHub Pages veröffentlicht den Repository-Hauptordner von Branch `main`. Der Pages-Build zu Commit `210ef4c` war erfolgreich; die neue Version ist unter https://gaschde.github.io/homepage/ öffentlich geprüft.
+- Die Umstellung zur Veröffentlichung über GitHub Pages wurde in Commit `e0f784e` nach `origin/main` gepusht. Das Homepage-Upgrade ist in Commit `210ef4c` auf `main` veröffentlicht.
+- Das bestätigte Homepage-Upgrade wurde isoliert im Worktree `homepage-upgrade` umgesetzt: INOVIS als faktischer Verkaufsbeleg, gekürzter ICT-Transfer und ein durchgängiges Linienmotiv für die Denkspur. Frische Read-only-Reviews zu Gestaltung, Frontend und Bewerberperspektive wurden durchgeführt und ihre relevanten Befunde eingearbeitet. Desktop, 390 px und 320 px, mobile Navigation mit Tastatur und Escape, Sidestep-Auswahl und reduzierte Bewegung wurden geprüft; bei 320 px trat kein Überlauf auf.
 - Die lokale Arbeitskopie enthält weiterhin den untracked Ordner `.codex-remote-attachments/`; er gehört nicht zu dieser Änderung und darf nicht verändert oder aufgenommen werden.
 
 ## Ziel und Positionierung
@@ -53,10 +53,9 @@ Die gewählte Richtung verbindet Astras inhaltliche Prioritäten mit den visuell
 
 - `index.html` ist die maßgebliche Seitenquelle; Assets werden direkt aus `dist/` geladen. Es gibt keine zusätzliche `design-preview/`-Kopie oder Vergleichsroute.
 - Für substanzielles Homepage-Redesign die Arbeit nach `AGENTS.md` isoliert in einem Codex-Worktree beginnen. Keine parallelen Designvarianten, solange Yeshe sie nicht ausdrücklich beauftragt.
-- GitHub Pages soll Branch `main` aus dem Repository-Hauptordner veröffentlichen. Die dafür nötige Repository-Einstellung muss noch geprüft beziehungsweise aktiviert werden. Auf GitHub Pages veröffentlichte Inhalte sind öffentlich.
+- GitHub Pages veröffentlicht Branch `main` aus dem Repository-Hauptordner. Auf GitHub Pages veröffentlichte Inhalte sind öffentlich.
 - Vor einem neuen Chat: `AGENTS.md` und diese Datei lesen, den tatsächlichen Git-Stand prüfen und den konkreten Auftrag nennen. Diese Datei bei bestätigten Entscheidungen oder relevantem Fortschritt aktualisieren.
 
 ## Noch offen
 
 - Für den Verkaufsbeleg werden nur bestätigte INOVIS-Fakten genutzt. Ein einzelner Kundenfall und ein Geschäftsergebnis bleiben offen, bis Fakten und Veröffentlichung dafür bestätigt sind.
-- GitHub-Pages-Einstellung für `main` / Repository-Hauptordner prüfen und danach öffentliche Erreichbarkeit testen.
