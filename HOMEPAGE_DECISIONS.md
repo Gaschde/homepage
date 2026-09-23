@@ -6,13 +6,13 @@
 ## Aktueller Stand
 
 - Die Homepage ist Yeshe Sampas persönliche Bewerbungs- und Portfolioseite.
-- `design-preview/` enthält den neuesten Homepage-Stand samt CSS und JavaScript. Dieser Stand ist jetzt die Hauptseite: `index.html` im Repository-Hauptordner bildet ihn mit passenden Pfaden ab; `dist/index.html` ist die für den statischen Host bestimmte Kopie.
-- Der vorherige Homepage-Stand bleibt als Vergleich in `dist/vorschau/index.html` und ist für den statischen Host unter `/vorschau/` bestimmt. Er verwendet die gemeinsam genutzten Styles, Skripte, das Porträt und PDFs aus `dist/`; separate Vorschaukopien von CSS und JavaScript sind nicht nötig.
-- `.openai/hosting.json` weist `dist/` als statischen Veröffentlichungsordner aus. Damit ist `dist/index.html` die Hauptseite und `dist/vorschau/index.html` der frühere Stand zum Vergleichen.
-- **Veröffentlichungsstatus UNCONFIRMED:** Die verbundene Sites-Seite ist derzeit nur für den Eigentümer freigegeben. Ihr konfigurierter Cloudflare-Artifact-Quellbranch `main` steht auf `e954f6e`; deshalb konnte die Sites-Version für den nach `origin/main` gepushten Stand nicht gespeichert oder veröffentlicht werden. Die öffentliche Erreichbarkeit von `/vorschau/` ist noch nicht bestätigt.
-- Vor den bereits gepushten Veröffentlichungsänderungen war Branch `main` mit `origin/main` synchron; damaliger Ausgangs-HEAD `6bbe334`. Der letzte gepushte Zwischenstand vor dem nun vorgenommenen Versionstausch war `c7fca4b`.
-- Das nächste Upgrade ist **geplant, noch nicht begonnen**. Es wurden dafür weder Branch noch Worktrees oder Vorschauvarianten erstellt.
-- Die lokale Arbeitskopie hatte zuletzt zusätzlich den untracked Ordner `.codex-remote-attachments/`; dieser gehört nicht zum Upgrade und darf nicht versehentlich aufgenommen werden.
+- `index.html` im Repository-Hauptordner ist der einzige Homepage-Einstiegspunkt und enthält den neuesten bestätigten Stand.
+- `dist/` enthält die dazugehörigen Assets: Stylesheet, JavaScript, Porträt und PDFs. Die Hauptseite lädt diese Dateien über relative `dist/...`-Pfade.
+- `dist/` ist damit ein Asset-Ordner, kein Veröffentlichungs-Einstieg. Die doppelte `dist/index.html`, `dist/vorschau/`, `design-preview/`, `.openai/hosting.json` und `.superdesign/`-Projektdateien wurden aus der lokalen Arbeitskopie entfernt.
+- GitHub Pages soll den Repository-Hauptordner auf Branch `main` veröffentlichen. **Veröffentlichungsstatus UNCONFIRMED:** Die Pages-Einstellung und öffentliche Erreichbarkeit wurden noch nicht geprüft. Die vorhandene Sites-Seite bleibt extern unverändert und wird von diesem Repository nicht mehr benötigt.
+- Diese lokale Umstellung basiert auf Branch `main`, Ausgangs-HEAD `10a40d2`; sie ist noch nicht committet oder gepusht.
+- Das inhaltliche Homepage-Upgrade ist **geplant, noch nicht umgesetzt**. Die aktuelle lokale Änderung bereinigt nur Seitenstruktur und Veröffentlichungsbasis.
+- Die lokale Arbeitskopie enthält weiterhin den untracked Ordner `.codex-remote-attachments/`; er gehört nicht zu dieser Änderung und darf nicht verändert oder aufgenommen werden.
 
 ## Ziel und Positionierung
 
@@ -49,18 +49,15 @@ Die gewählte Richtung verbindet Astras inhaltliche Prioritäten mit den visuell
 - Überladene Animationen, 3D/WebGL als Selbstzweck oder Interaktionen, die CV, Erfahrung, Profil oder Kontakt verstecken.
 - CV-/PDF-Inhalte ohne ausdrücklichen Auftrag ändern.
 
-## Vorschau- und Chat-Arbeitsweise
+## Arbeitsweise und Veröffentlichung
 
-- Den nächsten Entwurf auf Basis des aktuellen Git-Stands entwickeln, aber isoliert in Codex-Worktrees; `main` bleibt bis zur Auswahl der Vorschau unangetastet.
-- Die Zahl und die konkreten Richtungen paralleler Entwürfe sind noch offen. Falls drei Varianten gewünscht sind, sollen sie unabhängig voneinander vom gleichen Ausgangsstand starten und jeweils einen eigenen Arbeitsbereich bekommen.
-- Ein Worktree/Chat kennt seinen Startstand und diese Datei, aber nicht automatisch die Änderungen oder den Gesprächsverlauf anderer Chats. Der koordinierende Chat vergleicht deren Ergebnisse.
-- `design-preview/` ist die Quelle des neuesten Homepage-Stands. Änderungen daran müssen in `index.html` und `dist/index.html` übernommen werden. `dist/vorschau/` hält den vorherigen Stand zum Vergleichen bereit und soll unter `/vorschau/` erreichbar sein. Weitere parallele Vorschauvarianten sind noch nicht beschlossen. Alles auf GitHub Pages veröffentlichte ist öffentlich.
+- `index.html` ist die maßgebliche Seitenquelle; Assets werden direkt aus `dist/` geladen. Es gibt keine zusätzliche `design-preview/`-Kopie oder Vergleichsroute.
+- Für substanzielles Homepage-Redesign die Arbeit nach `AGENTS.md` isoliert in einem Codex-Worktree beginnen. Keine parallelen Designvarianten, solange Yeshe sie nicht ausdrücklich beauftragt.
+- GitHub Pages soll Branch `main` aus dem Repository-Hauptordner veröffentlichen. Die dafür nötige Repository-Einstellung muss noch geprüft beziehungsweise aktiviert werden. Auf GitHub Pages veröffentlichte Inhalte sind öffentlich.
 - Vor einem neuen Chat: `AGENTS.md` und diese Datei lesen, den tatsächlichen Git-Stand prüfen und den konkreten Auftrag nennen. Diese Datei bei bestätigten Entscheidungen oder relevantem Fortschritt aktualisieren.
 
 ## Offen für die nächste Planungsrunde
 
-- Wie viele Varianten sollen tatsächlich entworfen werden, und worin sollen sie sich unterscheiden?
 - Welcher konkrete Verkaufsfall zeigt Yeshes Beitrag am glaubwürdigsten? Fakten, Zeitraum, Kennzahlen und gewünschte Veröffentlichung vor Verwendung prüfen.
-- Rückmeldungen sollen sich auf den neuesten Stand auf der Hauptseite beziehen. Die öffentliche Erreichbarkeit der verbundenen Sites-Seite ist noch nicht bestätigt.
-- Vor dem Teilen: den Quellbranch der verbundenen Sites-Seite mit dem Repo-Stand abgleichen, die Version speichern und veröffentlichen sowie die öffentliche Erreichbarkeit prüfen.
+- GitHub-Pages-Einstellung für `main` / Repository-Hauptordner prüfen und danach öffentliche Erreichbarkeit testen.
 - Nach Umsetzung: gerenderte Desktop- und Mobilansicht sowie Tastaturbedienung und reduzierte Bewegung prüfen. Die bisherigen Scores (ungefähr 79–82 aktuell, 86–89 als Upgrade-Prognose) sind subjektive Schätzungen, keine Abnahmekriterien.
