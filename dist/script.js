@@ -55,26 +55,6 @@ navigation.addEventListener('focusout', (event) => {
   if (navigation.classList.contains('is-open') && !navigation.contains(event.relatedTarget) && event.relatedTarget !== menuButton) closeMenu();
 });
 
-const diagnosisButtons = [...document.querySelectorAll('.diagnosis-tab')];
-const diagnosisPanels = [...document.querySelectorAll('.diagnosis-panel')];
-const diagnosisStatus = document.querySelector('#diagnosis-status');
-
-diagnosisButtons.forEach((button) => {
-  button.addEventListener('click', () => {
-    const selected = button.dataset.case;
-    diagnosisButtons.forEach((item) => {
-      const active = item === button;
-      item.classList.toggle('is-active', active);
-      item.setAttribute('aria-pressed', String(active));
-    });
-    diagnosisPanels.forEach((panel) => {
-      panel.classList.toggle('is-active', panel.dataset.casePanel === selected);
-    });
-    const panel = diagnosisPanels.find((item) => item.dataset.casePanel === selected);
-    diagnosisStatus.textContent = panel.querySelector('h3').textContent;
-  });
-});
-
 const sectionLinks = [...navigation.querySelectorAll('a[href^="#"]')];
 const sections = sectionLinks.map((link) => document.querySelector(link.getAttribute('href'))).filter(Boolean);
 if ('IntersectionObserver' in window) {

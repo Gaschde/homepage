@@ -1,6 +1,6 @@
 # Homepage: Entscheidungen und Projektstand
 
-**Zuletzt aktualisiert:** 2026-09-23
+**Zuletzt aktualisiert:** 2026-09-24
 **Zweck:** Knappe, chatübergreifende Quelle für bestätigte Homepage-Entscheidungen, ausgeschlossene Richtungen und den nächsten Arbeitsschritt. Kein Gesprächsprotokoll.
 
 ## Aktueller Stand
@@ -9,9 +9,10 @@
 - `index.html` im Repository-Hauptordner ist der einzige Homepage-Einstiegspunkt und enthält den neuesten bestätigten Stand.
 - `dist/` enthält die dazugehörigen Assets: Stylesheet, JavaScript, Porträt und PDFs. Die Hauptseite lädt diese Dateien über relative `dist/...`-Pfade.
 - `dist/` ist damit ein Asset-Ordner, kein Veröffentlichungs-Einstieg. Die doppelte `dist/index.html`, `dist/vorschau/`, `design-preview/`, `.openai/hosting.json` und `.superdesign/`-Projektdateien wurden aus der lokalen Arbeitskopie entfernt.
-- GitHub Pages veröffentlicht den Repository-Hauptordner von Branch `main`. Der Pages-Build zu Commit `210ef4c` war erfolgreich; die neue Version ist unter https://gaschde.github.io/homepage/ öffentlich geprüft.
+- GitHub Pages veröffentlicht den Repository-Hauptordner von Branch `main`. Der frühere Stand zu Commit `ffc65c0` war unter https://gaschde.github.io/homepage/ öffentlich geprüft.
 - Die Umstellung zur Veröffentlichung über GitHub Pages wurde in Commit `e0f784e` nach `origin/main` gepusht. Das Homepage-Upgrade ist in Commit `210ef4c` auf `main` veröffentlicht.
-- Das bestätigte Homepage-Upgrade wurde isoliert im Worktree `homepage-upgrade` umgesetzt: INOVIS als faktischer Verkaufsbeleg, gekürzter ICT-Transfer und ein durchgängiges Linienmotiv für die Denkspur. Frische Read-only-Reviews zu Gestaltung, Frontend und Bewerberperspektive wurden durchgeführt und ihre relevanten Befunde eingearbeitet. Desktop, 390 px und 320 px, mobile Navigation mit Tastatur und Escape, Sidestep-Auswahl und reduzierte Bewegung wurden geprüft; bei 320 px trat kein Überlauf auf.
+- Die bestätigte Folgefassung bündelt Sidestep, KI-Praxis und den ICT-Berufsbezug unter «Arbeitsweise». Die drei Prüfpfade sind ausdrücklich Vorschläge, keine ausgeführten Tests oder Messungen. Der INOVIS-Block bleibt ein eigener Verkaufsbeleg; die Kundenspanne vom Einzelgerät über Grossmengen bis zu Rahmenaufträgen übernimmt einen bereits veröffentlichten Fakt. Ein einzelner Kundenfall und ein Geschäftsergebnis bleiben offen.
+- Frische Read-only-Reviews zu Gestaltung, Frontend und Bewerberperspektive wurden durchgeführt und ihre relevanten Befunde eingearbeitet. Playwright/Chrome-Prüfungen bei 1440, 390 und 320 px ergaben keinen horizontalen Überlauf, keine doppelten IDs, fehlenden Anker oder Browserfehler. Skip-Link-Fokus, Mobile-Navigation mit Escape und reduzierte Bewegung wurden geprüft.
 - Die lokale Arbeitskopie enthält weiterhin den untracked Ordner `.codex-remote-attachments/`; er gehört nicht zu dieser Änderung und darf nicht verändert oder aufgenommen werden.
 
 ## Ziel und Positionierung
