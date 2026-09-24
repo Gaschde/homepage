@@ -11,7 +11,8 @@
 - `dist/` ist damit ein Asset-Ordner, kein Veröffentlichungs-Einstieg. Die doppelte `dist/index.html`, `dist/vorschau/`, `design-preview/`, `.openai/hosting.json` und `.superdesign/`-Projektdateien wurden aus der lokalen Arbeitskopie entfernt.
 - GitHub Pages veröffentlicht den Repository-Hauptordner von Branch `main`. Der frühere Stand zu Commit `ffc65c0` war unter https://gaschde.github.io/homepage/ öffentlich geprüft.
 - Die Umstellung zur Veröffentlichung über GitHub Pages wurde in Commit `e0f784e` nach `origin/main` gepusht. Das Homepage-Upgrade ist in Commit `210ef4c` auf `main` veröffentlicht.
-- Die bestätigte Folgefassung bündelt Sidestep, KI-Praxis und den ICT-Berufsbezug unter «Arbeitsweise». Die drei Prüfpfade sind ausdrücklich Vorschläge, keine ausgeführten Tests oder Messungen. Der INOVIS-Block bleibt ein eigener Verkaufsbeleg; die Kundenspanne vom Einzelgerät über Grossmengen bis zu Rahmenaufträgen übernimmt einen bereits veröffentlichten Fakt. Ein einzelner Kundenfall und ein Geschäftsergebnis bleiben offen.
+- Die bestätigte Folgefassung bündelt Sidestep, KI-Praxis und den ICT-Berufsbezug unter «Arbeitsweise». Drei geordnete Schritte vergleichen Sidestep und Verkaufsalltag jeweils direkt. Die Verkaufsspalte ist ein übertragbares Denkmodell, kein dokumentierter einzelner Kundenfall; Sidestep-Tests bleiben Vorschläge ohne behauptete Messungen oder Resultate.
+- Im Hero steht der goldene «Mein Ansatz»-Streifen in einer eigenen Zeile unter dem Porträt, damit der Bildname frei bleibt. Der separate INOVIS-Beleg zeigt genau drei bestätigte Punkte: Auftragsspanne vom Einzelgerät über Grossmengen bis zu Rahmenaufträgen, eigenes Gebiet mit individuellem Jahresumsatzziel und die Aufteilung in drei Regionen gemeinsam mit CEO und COO. Ein einzelner Kundenfall und ein Geschäftsergebnis bleiben offen.
 - Frische Read-only-Reviews zu Gestaltung, Frontend und Bewerberperspektive wurden durchgeführt und ihre relevanten Befunde eingearbeitet. Playwright/Chrome-Prüfungen bei 1440, 390 und 320 px ergaben keinen horizontalen Überlauf, keine doppelten IDs, fehlenden Anker oder Browserfehler. Skip-Link-Fokus, Mobile-Navigation mit Escape und reduzierte Bewegung wurden geprüft.
 - Die lokale Arbeitskopie enthält weiterhin den untracked Ordner `.codex-remote-attachments/`; er gehört nicht zu dieser Änderung und darf nicht verändert oder aufgenommen werden.
 
@@ -36,7 +37,7 @@ Die gewählte Richtung verbindet Astras inhaltliche Prioritäten mit den visuell
 
 - Sidestep ist ein konkretes Beispiel für Yeshes systematische Problemanalyse und den Einsatz von KI-Agenten.
 - Seine Denkweise lässt sich als Problem → Messung → Hypothese/Gegenhypothese → Experiment → Ergebnis → nächste Entscheidung beschreiben.
-- Der aktuelle Prüfstand zeigt mögliche Erklärungen und vorgeschlagene Tests. Er darf nicht als Nachweis bereits ausgeführter Experimente oder gemessener Resultate beschrieben werden, sofern diese nicht separat bestätigt sind.
+- Der aktuelle Vergleich zeigt einen vorgeschlagenen Test und drei Denk- und Arbeitsschritte. Er darf nicht als Nachweis bereits ausgeführter Experimente oder gemessener Resultate beschrieben werden, sofern diese nicht separat bestätigt sind. Die Fragen in der Verkaufsspalte sind ein Denkmodell, kein einzelner Kundenfall.
 - Die technische Implementierung in Sidestep erfolgt durch KI-/Coding-Agenten. Yeshe beansprucht keine selbständige Softwareentwicklungs- oder Programmiererfahrung.
 - KI-Orchestrierung und kritische Nutzung dürfen als praktische Stärke sichtbar sein. Keine unbelegte Rangbehauptung wie „besser als 95 % der Nutzer“ verwenden.
 
