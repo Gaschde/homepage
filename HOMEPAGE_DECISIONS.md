@@ -1,12 +1,13 @@
 # Homepage: Entscheidungen und Projektstand
 
-**Zuletzt aktualisiert:** 2026-09-24
+**Zuletzt aktualisiert:** 2026-09-25
 **Zweck:** Knappe, chatübergreifende Quelle für bestätigte Homepage-Entscheidungen, ausgeschlossene Richtungen und den nächsten Arbeitsschritt. Kein Gesprächsprotokoll.
 
 ## Aktueller Stand
 
 - Die Homepage ist Yeshe Sampas persönliche Bewerbungs- und Portfolioseite.
-- `index.html` im Repository-Hauptordner ist der einzige Homepage-Einstiegspunkt und enthält den neuesten bestätigten Stand.
+- `index.html` im Repository-Hauptordner bleibt der Einstiegspunkt für den neuesten bestätigten Stand. Auf ausdrücklichen Nutzerwunsch wird zusätzlich die erste vollständige Fassung unter `v1/index.html` veröffentlicht.
+- `v1/` ist eine unveränderte Kopie der zehn Website-Dateien aus `dist/` in Commit `c5353046aaba5357c8b1768e851f8e441b269f40` vom 21. September 2026. Zieladresse: https://gaschde.github.io/homepage/v1/. Der erste Commit `95e910c` enthält dieselbe HTML-Datei, aber noch keine Assets; deshalb dient der erste vollständige Import als v1-Quelle. Das Archiv bleibt unabhängig von späteren Änderungen an der Hauptseite.
 - `dist/` enthält die dazugehörigen Assets: Stylesheet, JavaScript, Porträt und PDFs. Die Hauptseite lädt diese Dateien über relative `dist/...`-Pfade.
 - `dist/` ist damit ein Asset-Ordner, kein Veröffentlichungs-Einstieg. Die doppelte `dist/index.html`, `dist/vorschau/`, `design-preview/`, `.openai/hosting.json` und `.superdesign/`-Projektdateien wurden aus der lokalen Arbeitskopie entfernt.
 - GitHub Pages veröffentlicht den Repository-Hauptordner von Branch `main`. Der frühere Stand zu Commit `ffc65c0` war unter https://gaschde.github.io/homepage/ öffentlich geprüft.
@@ -53,7 +54,7 @@ Die gewählte Richtung verbindet Astras inhaltliche Prioritäten mit den visuell
 
 ## Arbeitsweise und Veröffentlichung
 
-- `index.html` ist die maßgebliche Seitenquelle; Assets werden direkt aus `dist/` geladen. Es gibt keine zusätzliche `design-preview/`-Kopie oder Vergleichsroute.
+- `index.html` ist die maßgebliche Seitenquelle der aktuellen Homepage; Assets werden direkt aus `dist/` geladen. Die ausdrücklich beauftragte Vergleichsroute `v1/` besitzt ihre eigenen historischen Assets. Es gibt keine zusätzliche `design-preview/`-Kopie.
 - Für substanzielles Homepage-Redesign die Arbeit nach `AGENTS.md` isoliert in einem Codex-Worktree beginnen. Keine parallelen Designvarianten, solange Yeshe sie nicht ausdrücklich beauftragt.
 - GitHub Pages veröffentlicht Branch `main` aus dem Repository-Hauptordner. Auf GitHub Pages veröffentlichte Inhalte sind öffentlich.
 - Vor einem neuen Chat: `AGENTS.md` und diese Datei lesen, den tatsächlichen Git-Stand prüfen und den konkreten Auftrag nennen. Diese Datei bei bestätigten Entscheidungen oder relevantem Fortschritt aktualisieren.
